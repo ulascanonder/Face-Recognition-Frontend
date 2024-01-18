@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Face and Image Recognition API with React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Ekran Görüntüsü (32)](https://github.com/ulascanonder/Face-Recognition-Frontend/assets/103257323/507d316b-2afb-4845-aa0d-ca9b803e1282)
 
-## Available Scripts
+![Ekran Görüntüsü (33)](https://github.com/ulascanonder/Face-Recognition-Frontend/assets/103257323/d4bc78a9-f5e6-4160-86e9-e49a07d35182)
 
-In the project directory, you can run:
+## This repository containts the front end code for my face and image recognition web site.
+You can check out my website from this [Link](https://face-recognition-frontend-oh52.onrender.com/). However it might take a while for it to open at the first time due to the servers being inactive. Or you can download this project to your computer and run it on your local host.
 
-### `npm start`
+## How to use it ?
+Just copy an image URL and paste it into the input bar. Then choose a mod. You can either choose face detection or image recoginiton mode. You can see the results by pressing the detect button. The website will want you to login first. You can create an acount to see how many entries you have done but that's completely optional since there is a 'Try without signing in' button which allows you to use it without an account.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How does it work ?
+I'm using [clarifai](https://www.clarifai.com/)'s face-detection and genereal-image-recognition algorithms. Clarifai is a company wich offers tons of AI algorithms that you can access with an API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to run this site on your localhost ?
+Just download this repository then
 
-### `npm test`
+#### Run `npm install`
+#### Run `npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+then the website will open on your local host. However since you are running it without backend you won't be able register or sign in to any account but you can still use it using the 'Try without signing in' option.
