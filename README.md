@@ -19,4 +19,4 @@ Just download this repository then
 #### Run `npm install`
 #### Run `npm start`
 
-then the website will open on your local host. However since you are running it without backend you won't be able register or sign in to any account but you can still use it using the 'Try without signing in' option.
+then the website will start running on your local host. However since you are running it without backend you won't be able register or sign in to any account but you can still use it using the 'Try without signing in' option.
