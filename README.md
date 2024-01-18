@@ -1,8 +1,8 @@
 # Face and Image Recognition API with React.
 
-![Ekran Görüntüsü (32)](https://github.com/ulascanonder/Face-Recognition-Frontend/assets/103257323/507d316b-2afb-4845-aa0d-ca9b803e1282)
+<img  src = "https://github.com/ulascanonder/Face-Recognition-Frontend/assets/103257323/507d316b-2afb-4845-aa0d-ca9b803e1282" width = "700" length = "auto"/>
+<img  src = "https://github.com/ulascanonder/Face-Recognition-Frontend/assets/103257323/d4bc78a9-f5e6-4160-86e9-e49a07d35182" width = "700" length = "auto"/>
 
-![Ekran Görüntüsü (33)](https://github.com/ulascanonder/Face-Recognition-Frontend/assets/103257323/d4bc78a9-f5e6-4160-86e9-e49a07d35182)
 
 ## This repository containts the front end code for my face and image recognition web site.
 You can check out my website from this [Link](https://face-recognition-frontend-oh52.onrender.com/). However it might take a while for it to open at the first time due to the servers being inactive. Or you can download this project to your computer and run it on your local host.
