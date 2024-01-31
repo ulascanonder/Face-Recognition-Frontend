@@ -111,7 +111,8 @@ class App extends React.Component{
       leftCol: boundingBox.left_col.toFixed(3) * width,
       topRow: boundingBox.top_row.toFixed(3) * height,
       rightCol: width - (boundingBox.right_col.toFixed(3) * width),
-      bottomRow: height - (boundingBox.bottom_row.toFixed(3) * height)
+      bottomRow: height - (boundingBox.bottom_row.toFixed(3) * height),
+      bottom: img.height
     }
   }
 
