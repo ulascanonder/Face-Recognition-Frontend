@@ -55,6 +55,8 @@ const initalstate = {
   route: "signIn",
   signedIn: false,
   objectName: "",
+  region: 0,
+  result: '',
   user: {
         id: '',
         name: '',
@@ -127,10 +129,20 @@ class App extends React.Component{
     this.setState({searchField: event.target.value});
   }
 
+  onWhatElse = () =>{
+    this.setState({region: this.state.region+1})
+    this.faceDetect(this.state.result)
+  }
+
   faceDetect = (result) => {
     const regions = result.outputs[0].data.regions;
     ///
-      const region = regions[0];
+      let region;
+      if(this.state.region < regions.length) region = regions[this.state.region];
+      else{
+        this.setState({region: 0});
+        return;
+      }
       const boundingBox = region.region_info.bounding_box;
       const topRow = boundingBox.top_row.toFixed(3);
       const leftCol = boundingBox.left_col.toFixed(3);
@@ -152,10 +164,10 @@ class App extends React.Component{
 
   onSubmit = () =>{
     if(this.state.searchField === "") return;
-    this.setState({imgUrl: this.state.searchField});
+    this.setState({imgUrl: this.state.searchField, region: 0});
     fetch("https://api.clarifai.com/v2/models/" + this.state.MODEL_ID + "/outputs", requestFaceDetectionAPI(this.state.searchField))
     .then(response => response.json())
-    .then(result => {
+    .then(data => {
       console.log('Sending put');
       if(!this.state.defaultMode){
             fetch('https://face-recognition-server-a4fe.onrender.com/image', {
@@ -165,8 +177,9 @@ class App extends React.Component{
             .then(response => response.json())
             .then(data => this.setState(Object.assign(this.state.user, {entries: data})))
             .catch(console.log)}
-      this.faceDetect(result);
-      
+      this.setState({result: data})
+      this.faceDetect(data);
+      console.log('RESULT: ' + this.state.result)
     })
     .catch(error => console.log('error', error));
   }
@@ -185,7 +198,8 @@ class App extends React.Component{
             }
           <ModeButtons onChangeAlgorithmMode = {this.onChangeAlgorithmMode}/>
           <ImageLinkForm onInputChange = {this.onInputChange} onSubmit = {this.onSubmit}/>
-          <FaceRecognition img = {this.state.imgUrl} box = {this.state.box} objectName = {this.state.objectName}/>
+          <FaceRecognition img = {this.state.imgUrl} box = {this.state.box}
+          objectName = {this.state.objectName} onWhatElse = {this.onWhatElse}/>
         </div>
         : (this.state.route === "signIn"
           ? <SignIn onRouteChange = {this.onRouteChange} loadUser = {this.loadUser} onDefaultMode = {this.onDefaultMode}/>
