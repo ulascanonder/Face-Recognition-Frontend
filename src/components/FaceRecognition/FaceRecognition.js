@@ -20,7 +20,7 @@ const FaceRecognition = (props) => {
                     <img src={imgUrl} alt="faceImage" id="inputImage" width="500px" height="auto"/>
                     <div className="bounding-box" style={{top: box.topRow, right: box.rightCol, bottom: box.bottomRow, left: box.leftCol}}></div>
                 </div> 
-                <div id = 'objectName' style={{top: box.bottom}}>
+                <div id = 'objectName' style={{top: box.bottom }}>
                     {objectName ? <h3>That seems to be a {objectName}.</h3> : <></>}</div>
             </div>
         )
