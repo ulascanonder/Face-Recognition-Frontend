@@ -12,3 +12,9 @@
     justify-content: center;
     width: 100%;
 }
+
+#objectName{
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
