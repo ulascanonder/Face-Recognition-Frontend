@@ -196,8 +196,8 @@ class App extends React.Component{
             ?<Rank name = {this.state.user.name} entries = {this.state.user.entries}/>
             :<></>
             }
-          <ModeButtons onChangeAlgorithmMode = {this.onChangeAlgorithmMode}/>
-          <ImageLinkForm onInputChange = {this.onInputChange} onSubmit = {this.onSubmit}/>
+          <ModeButtons onChangeAlgorithmMode = {this.onChangeAlgorithmMode} mode = {this.state.MODEL_ID}/>
+          <ImageLinkForm onInputChange = {this.onInputChange} onSubmit = {this.onSubmit} mode = {this.state.MODEL_ID}/>
           <FaceRecognition img = {this.state.imgUrl} box = {this.state.box}
           objectName = {this.state.objectName} onWhatElse = {this.onWhatElse}/>
         </div>
